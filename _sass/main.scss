@@ -1,0 +1,35 @@
+// Modules and Variables
+@import 'partials/base';
+
+// Partials
+@import "partials/reset";
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/figures";
+@import "partials/grids";
+
+// to fix
+#particles-js {
+  background-color: red;
+  height: 10vh;
+}
+
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+}
+
+.neum-elem {
+  @include neumorphism($backgroundColor);
+  border-radius: 1rem;
+  padding: 1rem;
+}
