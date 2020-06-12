@@ -8,15 +8,6 @@
 @import "partials/figures";
 @import "partials/grids";
 
-// to fix
-#particles-js {
-  background-color: red;
-  height: 10vh;
-}
-
-
-
-
 html,
 body {
   height: 100%;
@@ -28,8 +19,4 @@ body {
   font-family: $bodyFont;
 }
 
-.neum-elem {
-  @include neumorphism($backgroundColor);
-  border-radius: 1rem;
-  padding: 1rem;
-}
+

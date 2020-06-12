@@ -8,3 +8,5 @@ sass:
 
 exclude:
  - Makefile
+ - package.json
+ - yarn.lock
