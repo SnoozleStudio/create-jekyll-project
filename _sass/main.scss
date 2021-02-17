@@ -1,22 +1,31 @@
-// Modules and Variables
-@import 'partials/base';
+// base
+// the base directory contains Sass files that start a page.
+// These files are typically things like any vendor dependencies (Compass, Foundation)
+// or any of our own authored dependencies (mixens, variables, extends).
+// In the base directory we will also reset a default style for the browser.
+@import "base/mixins";
+@import "base/variables";
+@import "base/extends";
+@import "base/reset";
 
-// Partials
-@import "partials/reset";
-@import "partials/typography";
-@import "partials/buttons";
-@import "partials/figures";
-@import "partials/grids";
+// layout
+// the layout directory is a good place for us to control our grid system and any large page specific layout styles.
+@import "layout/grid";
 
-html,
-body {
-  height: 100%;
-}
+// modules
+// the modules directory contains the majority of our files
+// because we like to break our styles into small components
+// so we can leverage them throughout multiple pages on our site.
+// Each page is typically made up of at least 5 modules.
+// Some of the more common modules will include items such as header, footer, navigation and content blocks.
+@import "modules/header";
+@import "modules/buttons";
+@import "modules/footer";
 
-body {
-  background: $backgroundColor;
-  color: $bodyColor;
-  font-family: $bodyFont;
-}
-
-
+// themes
+// the themes directory contains any specific styles
+// that a page may need to overwrite a style in the layout or modules
+// without having to effect other pages referencing these layouts or modules.
+// For example the header in your website maybe green throughout a website or application
+// but on a specific page we want it to change to a grey background, that’s where the themes files come in handy.
+@import "themes/snoozle";
